@@ -8,13 +8,20 @@ After a series of discovery calls we found out a problem that our users are faci
 
 As a first iteration for this solution, we want to build a web application that allows users to create a memory lane and share it with friends and family. A memory lane is a collection of events that happened in a chronological order. Each event consists of a title, a description, a timestamp, and at least one image.
 
-## Deliverables
+## High level explanantion of my implementation
 
-- Clone this repository and create a new branch with your name. Open a pull request on your own instance of the repository.
-- An updated README providing a high level explanation of your implementation.
-- Update the API to accommodate for your technical design. Run the API by using `npm run serve:api`.
-- The provided mockup is only for reference and inspiration. Feel free to improve it!
+### Architecture
+I have implemented a simple arcticture of CRUD capabilities for memories
 
-### Inspiration mockup
+### UI
+I have frame the UI in an extremely basic manor, displaying memories in chronological order, with a header to either create a new memory or return to the "home" page to view all memories already stored in the DB.
 
-![Memory lane mockup](./memory_lane.png)
+### Next steps
+The next steps I would take would be:
+
+- Feature implementation:
+    - Authn/Authz flow
+    - Support for multiple images
+    - Sharing memories within the platform
+- UI:
+    - Enhanced styling

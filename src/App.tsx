@@ -1,22 +1,21 @@
-import { CubeIcon } from '@heroicons/react/20/solid'
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import MemoryForm from './components/MemoryForm'
+import MemoriesList from './components/MemoriesList'
+import MemoryView from './components/MemoryView'
+import Header from './components/Header'
 
 function App() {
   return (
-    <div>
-      <div className='mx-auto max-w-7xl sm:px-6 lg:px-8 mt-32'>
-        <div className='overflow-hidden rounded-lg bg-white shadow h-96'>
-          <div className='px-4 py-5 sm:p-6'>
-            <div className='flex items-center'>
-              <CubeIcon className='h-16 w-16 inline-block' />
-              <h1 className='text-4xl font-semibold text-gray-900 mb-4 ml-4 mt-4'>
-                Memory lane
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Router>
+      <Header/>
+      <Routes>
+      <Route path="/" element={<MemoriesList />} />
+      <Route path="/create" element={<MemoryForm />} />
+      <Route path="/memory/edit/:memoryid" element={<MemoryForm />} />
+      <Route path="memory/:id" element={<MemoryView />} />
+    </Routes>
+    </Router>
   )
 }
 
